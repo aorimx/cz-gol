@@ -1,0 +1,67 @@
+.input-plus {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding-left: 25px;
+  svg {
+    margin-right: 8px;
+    width: 15px;
+  }
+}
+form {
+  display: flex;
+  fieldset {
+    display: flex;
+    flex-direction: column;
+  }
+}
+label {
+  margin-bottom: $space-base;
+  display: flex;
+  b {
+    margin-left: $space-base;
+    font-weight: 300;
+  }
+}
+input[type=text],
+input[type=email],
+input[type=search],
+input[type=tel],
+input[type=url],
+input[type=password],
+textarea, select {
+  min-width: 160px;
+  width: 100%;
+  background-color: transparent;
+  padding-top: 2px;
+  padding-left: $space-base;
+  margin-bottom: $space-2;
+  border: solid 1px $gray-lighter;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  color: $color-primary;
+  -webkit-transition: border-color 400ms ease-in-out;
+  transition: border-color 400ms ease-in-out;
+  &:focus {
+    outline: none;
+  }
+  &:active, &:focus, &:visited {
+    border-bottom-color: $color-inverse;
+  }
+}
+select {
+  max-width: 320px;
+  height: 40px;
+}
+input[type=file]{
+  margin-bottom: $space-2;
+}
+input[type=radio],
+input[type=checkbox]{
+  margin-top: 4px;
+  margin-bottom: $space-2;
+  margin-left: $space-base;
+}

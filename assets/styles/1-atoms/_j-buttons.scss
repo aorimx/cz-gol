@@ -1,0 +1,201 @@
+button, .btn-solid {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  // height: fit-content;
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-bottom: 13px;
+  padding-left: 24px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: $space-2;
+  background-color: $color-secondary;
+  cursor: pointer;
+  color: $color-inverse;
+  line-height: 1;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  box-shadow: 0px 6px 5px -6px rgba(0, 0, 0, 0.15);
+  @media screen and (max-width: 768px){
+    max-width: 100%;
+  }
+  &:active,
+  &:focus,
+  &:visited {
+    box-shadow: 0px 6px 5px -4px rgba(0, 0, 0, 0.15);
+  }
+  &:active,
+  &:focus{
+    outline:none;
+  }
+  // Disable buttons in the interface
+  &.muted {
+    opacity: .3;
+    &:hover {
+      cursor:not-allowed;
+    }
+  }
+  //The part of the Button Sizes
+  &.sm {
+    font-size: 14px;
+  }
+  &.lg {
+    font-size: 24px;
+  }
+  &.xl {
+    font-size: 32px;
+  }
+  // The part of the Button Colors
+  //Primary
+  &.bg-color-primary {
+    &:hover{
+      background-color: darken($color-primary, 10);
+    }
+  }
+  //Secondary
+  &.bg-color-secondary {
+    &:hover{
+      background-color: darken($color-secondary, 10);
+    }
+  }
+  //Success
+  &.bg-color-success {
+    &:hover{
+      background-color: darken($color-success, 10);
+    }
+  }
+  //Informative
+  &.bg-color-info {
+    &:hover{
+      background-color: darken($color-info, 10);
+    }
+  }
+  //Warning
+  &.bg-color-warning {
+    &:hover{
+      background-color: darken($color-warning, 10);
+    }
+  }
+  //Danger
+  &.bg-color-danger {
+    &:hover{
+      background-color: darken($color-danger, 10);
+    }
+  }
+}
+// Button with outline style
+.btn-outline {
+  border: solid 2px $color-secondary;
+  color: $color-secondary;
+  background: transparent;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  &:hover,{
+    background-color: $color-secondary;
+    color: $color-inverse;
+    border: solid 2px $color-secondary;
+    color: $color-inverse;
+  }
+  // The part of the Button Colors Outline
+  //Primary
+  &.bg-color-primary {
+    border: solid 2px $color-primary;
+    color: $color-primary;
+    &:hover,{
+      background-color: $color-primary;
+      color: $color-inverse;
+      border: solid 2px $color-primary;
+      color: $color-inverse;
+    }
+  }
+  //Secondary
+  &.bg-color-secondary {
+    border: solid 2px $color-secondary;
+    color: $color-secondary;
+    &:hover{
+      background-color: $color-secondary;
+      color: $color-inverse;
+      border: solid 2px $color-secondary;
+    }
+  }
+  //Success
+  &.bg-color-success {
+    border: solid 2px $color-success;
+    color: $color-success;
+    &:hover{
+      background-color: $color-success;
+      color: $color-inverse;
+      border: solid 2px $color-success;
+    }
+  }
+  //Informative
+  &.bg-color-info {
+    border: solid 2px $color-info;
+    color: $color-info;
+    &:hover{
+      background-color: $color-info;
+      color: $color-inverse;
+      border: solid 2px $color-info;
+    }
+  }
+  //Warning
+  &.bg-color-warning {
+    border: solid 2px $color-warning;
+    color: $color-warning;
+    &:hover{
+      background-color: $color-warning;
+      color: $color-inverse;
+      border: solid 2px $color-warning;
+    }
+  }
+  //Danger
+  &.bg-color-danger {
+    border: solid 2px $color-danger;
+    color: $color-danger;
+    &:hover{
+      background-color: $color-danger;
+      color: $color-inverse;
+      border: solid 2px $color-danger;
+    }
+  }
+}
+// Containers for buttons
+.horizontal-btn-group {
+  display: flex;
+  width: 100%;
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+  }
+  button {
+    margin-right: $space-2;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+//Ripple efect for button feedback
+.ripple{
+  overflow:hidden;
+}
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+  animation: ripple-animation 2s;
+}
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(100);
+      opacity: 0;
+    }
+}

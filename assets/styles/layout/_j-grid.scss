@@ -1,0 +1,56 @@
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+  }
+  .unit {
+    transition: width 200ms ease-in-out;
+    // @media screen and (max-width: 768px){
+    //   padding-left: 0;
+    // }
+    // &:first-of-type {
+    //   padding-left: 0;
+    // }
+    // &:last-of-type {
+    //   padding-right: 0;
+    //   @media screen and (max-width: 768px){
+    //     padding-left: 0;
+    //   }
+    // }
+    &.half {
+      width: 50%;
+      padding-right: $space-2;
+      &:last-child {
+        padding-right: 0;
+      }
+      @media screen and (max-width: 768px){
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    &.third{
+      width: 33%;
+      padding-right: $space-2;
+      &:last-child {
+        padding-right: 0;
+      }
+      @media screen and (max-width: 768px){
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    &.fourth {
+      width: 25%;
+      padding-right: $space-2;
+      &:last-child {
+        padding-right: 0;
+      }
+      @media screen and (max-width: 768px){
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+  }
+}

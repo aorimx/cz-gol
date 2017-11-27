@@ -1,0 +1,53 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: $space-2;
+  // Zebra Stripped Table
+  tbody tr:nth-child(odd) {
+     background-color: $gray-ghost;
+  }
+  tr {
+    &:last-child {
+      border-bottom: 2px solid $gray-light;
+    }
+    th{
+      background-color: $gray-light;
+      color: white;
+      font-weight: 500;
+      text-align: left;
+      padding-top: 8px;
+      padding-right: 16px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      span {
+        font-size: smaller;
+        color: $gray-ghost; //Utilizamos este color por tener un color muy cercano al blanco con distinción del
+      }
+      &:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      &:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+  td {
+    text-align: left;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    color: $gray-dark;
+    border-right: 2px solid $gray-light;
+    &:last-child{
+      border-right: none;
+    }
+    span {
+      font-size: smaller;
+      color: $gray-regular;
+    }
+  }
+}
