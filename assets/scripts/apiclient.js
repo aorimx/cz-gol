@@ -10,14 +10,15 @@ function sendForm(form){
 		contentType: false,
 		processData: false,
 
-		success: function(data){
+		success: function(response){
       try {
-        dataJson=JSON.parse(data);
+        dataJson=JSON.parse(response);
 
       } catch (e) {
-        dataJson=data;
+        dataJson=response;
       }
-      console.log(dataJson);
+      console.log(dataJson.data);
+      swal("Pronostico", dataJson.data.message, "success");
 
 		},
 		error: function (response) {
@@ -62,16 +63,13 @@ function getMatchs(){
 		processData: false,
 
 		success: function(response){
-      console.log(response.data);
-      var diva=document.getElementById('formPrediccion');
+      var formulario=document.getElementById('formPrediccion');
       for(var i=0; i<response.data.length; i++){
-        var div = document.createElement('div');
-        div.innerHTML+=response.data[i];
-        document.getElementById('formPrediccion').appendChild(div);
+        formulario.innerHTML+=response.data[i];
       }
 		},
 		error: function (response) {
-			console.log("Ha ocurrido un error");
+      console.log("Ha ocurrido un error");
 		}
 	});
 }
