@@ -16,45 +16,51 @@
 <body class="center-full-screen">
   <!--  Main content -->
   <main class="j-workspace">
-    <div class="j-wrap-80">
-      <h1>Predicción para semana 2/4 </h1>
-      <!-- Partido a predecir -->
-      <h3>America vs Tigres <small>Miercoles 29</small></h3>
-      <select name="" id="">
-        <option value="">Gana</option>
-        <option value="">Empatan</option>
-        <option value="">Pierde</option>
-      </select>
-      <!-- Partido a predecir -->
-      <h3>Monarcas vs Monterrey <small>Jueves 30</small></h3>
-      <select name="" id="">
-        <option value="">Gana</option>
-        <option value="">Empatan</option>
-        <option value="">Pierde</option>
-      </select>
-      <!-- Partido a predecir -->
-      <h3>Tigres vs America <small>Sabado 2</small></h3>
-      <select name="" id="">
-        <option value="">Gana</option>
-        <option value="">Empatan</option>
-        <option value="">Pierde</option>
-      </select>
-      <!-- Partido a predecir -->
-      <h3>Monterrey vs Monarcas <small>Domingo 3</small></h3>
-      <select name="" id="">
-        <option value="">Gana</option>
-        <option value="">Empatan</option>
-        <option value="">Pierde</option>
-      </select>
-      <button class="bg-color-success">
-        Subir Resultados
-      </button>
-    </div>
+    
+      <form id="formPrediccion" action="" onsubmit="sendForm(this);" class="j-wrap-80">
+        <h1>Predicción para semana 2/4 </h1>
+        <!--Seleccion de usuario-->
+        <h3>¿Quien eres?</h3>
+        <select name="user" id="selectUser">
+          <option value="null" disabled selected>Un chocorrol</option>
+        </select>
+        <!-- Partido a predecir -->
+        <h3>America vs Tigres <small>Miercoles 29</small></h3>
+        <select name="partido1" id="">
+          <option value="">Gana</option>
+          <option value="">Empatan</option>
+          <option value="">Pierde</option>
+        </select>
+        <!-- Partido a predecir -->
+        <h3>Monarcas vs Monterrey <small>Jueves 30</small></h3>
+        <select name="partido2" id="">
+          <option value="">Gana</option>
+          <option value="">Empatan</option>
+          <option value="">Pierde</option>
+        </select>
+        <!-- Partido a predecir -->
+        <h3>Tigres vs America <small>Sabado 2</small></h3>
+        <select name="partido3" id="">
+          <option value="">Gana</option>
+          <option value="">Empatan</option>
+          <option value="">Pierde</option>
+        </select>
+        <!-- Partido a predecir -->
+        <h3>Monterrey vs Monarcas <small>Domingo 3</small></h3>
+        <select name="partido4" id="">
+          <option value="">Gana</option>
+          <option value="">Empatan</option>
+          <option value="">Pierde</option>
+        </select>
+        <button class="bg-color-success" type="submit">
+          Subir Resultados
+        </button>
+      </form>
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="assets/scripts/ripple.js"></script>
   <script src="assets/scripts/header.js"></script>
-
+  <script src="assets/scripts/apiclient.js"></script>
 </body>
 </html>
