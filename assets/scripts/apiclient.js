@@ -1,5 +1,4 @@
 function sendForm(form){
-	event.preventDefault(form);
 	var serializeArray = new FormData(form);
 
 	$.ajax({

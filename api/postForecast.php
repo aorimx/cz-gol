@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 for ($i=1; $i <= 4; $i++) {
     $itemName="partido".$i;
     $sql = "INSERT INTO predicciones(id_partido,id_usuario,resultado) values ('".$i."','".$_POST['user']."','".$_POST[$itemName]."')";
-    $result = $conn->query($sql);
+    
     if ($conn->query($sql) === TRUE) {
         
     } else {
@@ -23,7 +23,7 @@ for ($i=1; $i <= 4; $i++) {
 $conn->close();
 
 $data=array();
-$item=["message"=>'Toda salio bien'];
+$item=["message"=>'Tu pronostico ha sido agregado con exito. Por favor no vuelvas a ingresar los datos ¡Haz paro!'];
 
 header('Content-Type: application/json');
 echo json_encode(['data'=>$item]);
